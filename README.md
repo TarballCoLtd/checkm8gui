@@ -4,11 +4,11 @@ checkm8gui is an application for macOS and Linux which adapts the [ipwndfu](http
 
 ## Credit
 
+This program was written by [me](https://github.com/emeryferrari/), however this program would not be possible without the work [axi0mX](https://twitter.com/axi0mx/) has put into [ipwndfu](https://github.com/axi0mx/ipwndfu/).
+
 ## Features
 
 This program can enter your device into pwned DFU mode on checkm8-compatible devices. Once the device is entered into pwned DFU mode, this program can dump the SecureROM, demote your device, and verbose boot your device. Features which are planned to be implemented in the near future are decrypting keybags, changing your boot logo, restoring to signed and unsigned firmwares, and running custom ipwndfu commands.
-
-This program was written by [me](https://github.com/emeryferrari/), however this program would not be possible without the work [axi0mX](https://twitter.com/axi0mx/) has put into [ipwndfu](https://github.com/axi0mx/ipwndfu/).
 
 ## Disclaimer
 
