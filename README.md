@@ -8,11 +8,11 @@ This program was written by [me](https://github.com/emeryferrari/), however this
 
 ## Testing
 
-This program's GUI has been tested in an Ubuntu virtual machine and on a Windows machine, however, it has not been tested on a physical iOS device because I do not own a currently checkm8-compatible device.
+This program's GUI has been tested on an Ubuntu virtual machine and on a Windows machine, however, it has not been tested on a physical iOS device because I do not own a currently checkm8-compatible device.
 
 ## Features
 
-This program can enter your device into pwned DFU mode on checkm8-compatible devices. Once the device is entered into pwned DFU mode, this program can dump the SecureROM, demote your device, and verbose boot your device. Features which are planned to be implemented in the near future are decrypting keybags, changing your boot logo, restoring to signed and unsigned firmwares, and running custom ipwndfu commands.
+This program can enter your device into pwned DFU mode on a checkm8-compatible device. Once the device is in pwned DFU mode, this program can dump the SecureROM of the device, demote the device, or verbose boot the device. Features which are planned to be implemented in the near future are: decrypting keybags, changing your boot logo, restoring to signed and unsigned firmwares, and running custom ipwndfu commands.
 
 ## Disclaimer
 
@@ -24,13 +24,13 @@ This tool can either be run from the .jar executable of the latest release in th
 
 ## Prerequisites
 
-Besides the Java Runtime Environment or Development Kit, this program requires a separately downloaded copy of [ipwndfu](https://github.com/axi0mx/ipwndfu/). The location of this folder can be wherever you want and is specified by the directory in the checkm8gui.bin file or with the command-line argument --ipwndfu-folder (detailed below). If you can't find the checkm8gui.bin file, run the program and look again. It should appear in the working directory of the program.
+Besides the Java Runtime Environment or Development Kit, this program requires a separately downloaded copy of [ipwndfu](https://github.com/axi0mx/ipwndfu/). The location of this folder can be wherever you want and is specified by the directory in the checkm8gui.bin file or with the command-line argument --ipwndfu-folder (detailed below). If you can't find the checkm8gui.bin file, run the program and look again. It should appear in the working directory of checkm8gui.
 
 ## Command-line arguments
 
--v/-verbose - Prints the command issued to the terminal along with the output of the command when an option is picked. This is not to be confused with verbose booting your iOS device.
---ignore-os - Launches the application regardless of what operating system it's being run on.
---ipwndfu-folder folder - A command to manually specify your ipwndfu folder location. This does not overwrite the location recorded in checkm8gui.bin. This folder specification will only persist in the current session.
+-v/-verbose - Prints the command issued to the terminal along with the output of the command when an option is picked. This is not to be confused with verbose booting your iOS device.<br/>
+--ignore-os - Launches the application regardless of what operating system it's being run on.<br/>
+--ipwndfu-folder folder - A command to manually specify your ipwndfu folder location. This does not overwrite the location recorded in checkm8gui.bin. This folder specification will only persist in the current session.<br/>
 
 ## Troubleshooting
 
