@@ -98,9 +98,9 @@ public class Display {
 			Display.refresh();
 			boolean verbose = false;
 			for (int i = 0; i < Display.args.length; i++) {
-				if (Display.args[i].equals("-v")) {
+				if (Display.args[i].equals(C8Const.VERBOSE_FLAG_1)) {
 					verbose = true;
-				} else if (Display.args[i].equals("-verbose")) {
+				} else if (Display.args[i].equals(C8Const.VERBOSE_FLAG_2)) {
 					verbose = true;
 				}
 			}
@@ -145,9 +145,9 @@ public class Display {
 			Display.refresh();
 			boolean verbose = false;
 			for (int i = 0; i < Display.args.length; i++) {
-				if (Display.args[i].equals("")) {
+				if (Display.args[i].equals(C8Const.VERBOSE_FLAG_1)) {
 					verbose = true;
-				} else if (Display.args[i].equals("")) {
+				} else if (Display.args[i].equals(C8Const.VERBOSE_FLAG_2)) {
 					verbose = true;
 				}
 			}
@@ -201,9 +201,9 @@ public class Display {
 					Display.refresh();
 					boolean verbose = false;
 					for (int i = 0; i < Display.args.length; i++) {
-						if (Display.args[i].equals("")) {
+						if (Display.args[i].equals(C8Const.VERBOSE_FLAG_1)) {
 							verbose = true;
-						} else if (Display.args[i].equals("")) {
+						} else if (Display.args[i].equals(C8Const.VERBOSE_FLAG_2)) {
 							verbose = true;
 						}
 					}
@@ -250,9 +250,9 @@ public class Display {
 			Display.refresh();
 			boolean verbose = false;
 			for (int i = 0; i < Display.args.length; i++) {
-				if (Display.args[i].equals("")) {
+				if (Display.args[i].equals(C8Const.VERBOSE_FLAG_1)) {
 					verbose = true;
-				} else if (Display.args[i].equals("")) {
+				} else if (Display.args[i].equals(C8Const.VERBOSE_FLAG_2)) {
 					verbose = true;
 				}
 			}
