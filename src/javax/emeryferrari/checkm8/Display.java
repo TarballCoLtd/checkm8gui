@@ -22,13 +22,13 @@ public class Display {
 	private static final JButton SETTINGS = new JButton(C8Const.SETTINGS);
 	private static final JButton ABOUT = new JButton(C8Const.ABOUT);
 	private static final JButton OK = new JButton(C8Const.OK);
-	private static final JLabel NEWLINE = new JLabel("<html><body><br/>");
-	private static final JLabel EXPLOITING_LABEL = new JLabel("Running exploit...");
+	private static final JLabel NEWLINE = new JLabel(C8Const.NEWLINE);
+	private static final JLabel EXPLOITING_LABEL = new JLabel(C8Const.EXPLOITING_LABEL);
 	private static JPanel exploitOutput = new JPanel();
-	private static final JLabel IPWNDFU_FOLDER_LABEL = new JLabel("ipwndfu Folder: ");
+	private static final JLabel IPWNDFU_FOLDER_LABEL = new JLabel(C8Const.IPWNDFU_FOLDER_LABEL);
 	private static final JTextField IPWNDFU_FOLDER = new JTextField(50);
-	private static final JButton SAVE_RETURN = new JButton("Save Changes and Return");
-	private static final JButton BACK = new JButton("Back");
+	private static final JButton SAVE_RETURN = new JButton(C8Const.SAVE_RETURN);
+	private static final JButton BACK = new JButton(C8Const.BACK);
 	private Display() {}
 	public static void createDisplay(String[] args) {
 		Display.args = args;
@@ -105,8 +105,8 @@ public class Display {
 				}
 			}
 			if (verbose) {
-				Display.exploitOutput.add(new JLabel("OS: " + System.getProperty("os.name")));
-				Display.exploitOutput.add(new JLabel("terminal > " + C8Const.EXPLOIT_DEVICE_COMMAND));
+				Display.exploitOutput.add(new JLabel("OS: " + System.getProperty(C8Const.OS_NAME)));
+				Display.exploitOutput.add(new JLabel(C8Const.TERMINAL_HEADER + C8Const.EXPLOIT_DEVICE_COMMAND));
 				Display.refresh();
 			}
 			Display.exploitOutput.add(Display.NEWLINE);
@@ -152,8 +152,8 @@ public class Display {
 				}
 			}
 			if (verbose) {
-				Display.exploitOutput.add(new JLabel("OS: " + System.getProperty("os.name")));
-				Display.exploitOutput.add(new JLabel("terminal > " + C8Const.DUMP_SECUREROM_COMMAND));
+				Display.exploitOutput.add(new JLabel("OS: " + System.getProperty(C8Const.OS_NAME)));
+				Display.exploitOutput.add(new JLabel(C8Const.TERMINAL_HEADER + C8Const.DUMP_SECUREROM_COMMAND));
 				Display.refresh();
 			}
 			Display.exploitOutput.add(Display.NEWLINE);
@@ -189,11 +189,9 @@ public class Display {
 	}
 	public class DemoteDevice implements ActionListener {
 		public void actionPerformed(ActionEvent ev) {
-			String[] buttons1 = {"Yes, I know what I'm doing", "Cancel"};
-			String[] buttons2 = {"Yes", "No"};
-			int result1 = JOptionPane.showOptionDialog(null, "WARNING: Unless you know what demoting your device means and what JTAG is, do not complete this operation. It is not reversible.", "checkm8gui Warning", JOptionPane.WARNING_MESSAGE, 0, null, buttons1, buttons1[1]);
+			int result1 = JOptionPane.showOptionDialog(null, C8Const.WARNING_1, C8Const.WARNING_TITLE, JOptionPane.WARNING_MESSAGE, 0, null, C8Const.BUTTONS_1, C8Const.BUTTONS_2[1]);
 			if (result1 == 0 ) {
-				int result2 = JOptionPane.showOptionDialog(null, "Are you sure? You cannot undo this action.", "checkm8gui Warning", JOptionPane.WARNING_MESSAGE, 0, null, buttons2, buttons2[1]);
+				int result2 = JOptionPane.showOptionDialog(null, C8Const.WARNING_2, C8Const.WARNING_TITLE, JOptionPane.WARNING_MESSAGE, 0, null, C8Const.BUTTONS_2, C8Const.BUTTONS_2[1]);
 				if (result2 == 0) {
 					Display.exploitOutput = new JPanel();
 					Display.exploitOutput.setLayout(new BoxLayout(Display.exploitOutput, BoxLayout.Y_AXIS));
@@ -210,8 +208,8 @@ public class Display {
 						}
 					}
 					if (verbose) {
-						Display.exploitOutput.add(new JLabel("OS: " + System.getProperty("os.name")));
-						Display.exploitOutput.add(new JLabel("terminal > " + C8Const.DEMOTE_DEVICE_COMMAND));
+						Display.exploitOutput.add(new JLabel("OS: " + System.getProperty(C8Const.OS_NAME)));
+						Display.exploitOutput.add(new JLabel(C8Const.TERMINAL_HEADER + C8Const.DEMOTE_DEVICE_COMMAND));
 						Display.refresh();
 					}
 					Display.exploitOutput.add(Display.NEWLINE);
@@ -259,8 +257,8 @@ public class Display {
 				}
 			}
 			if (verbose) {
-				Display.exploitOutput.add(new JLabel("OS: " + System.getProperty("os.name")));
-				Display.exploitOutput.add(new JLabel("terminal > " + C8Const.VERBOSE_BOOT_COMMAND));
+				Display.exploitOutput.add(new JLabel("OS: " + System.getProperty(C8Const.OS_NAME)));
+				Display.exploitOutput.add(new JLabel(C8Const.TERMINAL_HEADER + C8Const.VERBOSE_BOOT_COMMAND));
 				Display.refresh();
 			}
 			Display.exploitOutput.add(Display.NEWLINE);

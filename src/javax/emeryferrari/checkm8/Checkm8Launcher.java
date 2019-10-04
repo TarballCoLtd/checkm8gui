@@ -1,16 +1,16 @@
 package javax.emeryferrari.checkm8;
 import java.io.*;
 public class Checkm8Launcher {
-	private static final String osRaw = System.getProperty("os.name");
-	private static final String os = System.getProperty("os.name").toLowerCase();
+	private static final String osRaw = System.getProperty(C8Const.OS_NAME);
+	private static final String os = System.getProperty(C8Const.OS_NAME).toLowerCase();
 	public static String ipwndfuFolder = "";
 	private Checkm8Launcher() {}
 	public static void main(String[] args) {
 		boolean set = true;
 		for (int x = 0; x < args.length; x++) {
-			if (args[x].equals("--ipwndfu-folder")) {
+			if (args[x].equals(C8Const.IPWNDFU_FOLDER_FLAG)) {
 				if (x+1 < args.length) {
-					Checkm8Launcher.ipwndfuFolder = args[x+1] + "/";
+					Checkm8Launcher.ipwndfuFolder = args[x+1];
 					set = false;
 				}
 			}
@@ -19,7 +19,7 @@ public class Checkm8Launcher {
 			try {
 				if (!new File(C8Const.SETTINGS_FILE).exists()) {
 					FileOutputStream fos = new FileOutputStream(C8Const.SETTINGS_FILE);
-					fos.write("ipwndfu-directory=ipwndfu".getBytes());
+					fos.write(C8Const.DEFAULT_1.getBytes());
 					fos.flush();
 					fos.close();
 				}
@@ -39,18 +39,18 @@ public class Checkm8Launcher {
 		C8Const.DUMP_SECUREROM_COMMAND = "./" + Checkm8Launcher.ipwndfuFolder + "ipwndfu --dump-rom";
 		C8Const.DEMOTE_DEVICE_COMMAND = "./" + Checkm8Launcher.ipwndfuFolder + "ipwndfu --demote";
 		C8Const.VERBOSE_BOOT_COMMAND = "./" + Checkm8Launcher.ipwndfuFolder + "ipwndfu -p --boot";
-		if (os.contains("mac")) {
+		if (os.contains(C8Const.OS[0])) {
 			Checkm8Launcher.valid(args);
-		} else if (os.contains("nix")) {
+		} else if (os.contains(C8Const.OS[1])) {
 			Checkm8Launcher.valid(args);
-		} else if (os.contains("nux")) {
+		} else if (os.contains(C8Const.OS[2])) {
 			Checkm8Launcher.valid(args);
-		} else if (os.contains("aix")) {
+		} else if (os.contains(C8Const.OS[3])) {
 			Checkm8Launcher.valid(args);
 		} else {
 			boolean ignore = false;
 			for (int y = 0; y < args.length; y++) {
-				if (args[y].equals("--ignore-os")) {
+				if (args[y].equals(C8Const.IGNORE_OS_FLAG)) {
 					ignore = true;
 				}
 			}
@@ -66,17 +66,17 @@ public class Checkm8Launcher {
 	}
 	private static void valid(String[] args) {
 		Checkm8Launcher.printOS();
-		System.out.println("Valid operating system detected.\nLaunching...\n");
+		System.out.println(C8Const.VALID);
 		Checkm8Launcher.launch(args);
 	}
 	private static void ignore(String[] args) {
 		Checkm8Launcher.printOS();
-		System.out.println("Invalid operating system detected.\nIgnoring and launching...\n");
+		System.out.println(C8Const.IGNORE);
 		Checkm8Launcher.launch(args);
 	}
 	private static void invalid() {
 		Checkm8Launcher.printOS();
-		System.out.println("Invalid operating system detected.\nipwndfu is a Unix executable and must run on a Unix-based operating system such as macOS or a variant of Linux.\nIf your operating system is based on Unix and this error message persists, run this program again with the --ignore-os argument.\nQuitting...\n");
+		System.out.println(C8Const.INVALID);
 		System.exit(1);
 	}
 	private static void launch(String[] args) {
