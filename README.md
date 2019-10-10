@@ -4,11 +4,13 @@ checkm8gui is an application for macOS and Linux which adapts the [ipwndfu](http
 
 ## Credit
 
-This program was written by [me](https://github.com/emeryferrari/), however this program would not be possible without the work [axi0mX](https://twitter.com/axi0mx/) has put into [ipwndfu](https://github.com/axi0mx/ipwndfu/).
+This program was written by [me](https://github.com/emeryferrari/), however this program would not be possible without the work [axi0mX](https://twitter.com/axi0mx/) has put into [ipwndfu](https://github.com/axi0mx/ipwndfu/) and the work [Srikanth Lingala](https://github.com/srikanth-lingala/) has put into [zip4j](https://github.com/srikanth-lingala/zip4j/).<br/>
+zip4j is licensed under the Apache License 2.0.
+zip4j Copyright 2010 Srikanth Reddy Lingala
 
 ## Testing
 
-This program's GUI has been tested on an Ubuntu virtual machine and on a Windows machine, however, it has not been tested on a physical iOS device because I do not own a currently checkm8-compatible device.
+This program's GUI has been tested on an Ubuntu virtual machine and on a Windows machine, however, it has not been tested on a physical iOS device because I own an S8003 iPhone 6s which is not currently supported by ipwndfu.
 
 ## Features
 
@@ -20,11 +22,13 @@ This is not a tool for the inexperienced. This tool could seriously damage your 
 
 ## Compilation/Execution
 
-This tool can either be run from the .jar executable of the latest release in the Releases tab, or can be compiled using javac.
+This tool can either be run from the .jar executable of the latest release in the Releases tab, or can be compiled using javac.<br/>
+If this program is compiled from the source code, the ipwndfu.zip file found in the src folder must be copied to the root of the compiled program's folder, otherwise checkm8gui will fail. If you run the program from the .jar in the Releases tab, this is not necessary and it can be run immediately.
 
 ## Prerequisites
 
-Besides the Java Runtime Environment or Development Kit, this program requires a separately downloaded copy of [ipwndfu](https://github.com/axi0mx/ipwndfu/). The location of this folder can be wherever you want and is specified by the directory in the checkm8gui.bin file or with the command-line argument --ipwndfu-folder (detailed below). If you can't find the checkm8gui.bin file, run the program and look again. It should appear in the working directory of checkm8gui.
+Java Runtime Environment or Java Development Kit<br/>
+A Unix-based operating system
 
 ## Command-line arguments
 

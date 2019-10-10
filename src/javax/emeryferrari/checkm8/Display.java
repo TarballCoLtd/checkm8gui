@@ -19,15 +19,11 @@ public class Display {
 	private static final JButton RESTORE_FIRMWARE_SIGN = new JButton(C8Const.RESTORE_FIRMWARE_SIGN);
 	private static final JButton RESTORE_FIRMWARE_UNSIGN = new JButton(C8Const.RESTORE_FIRMWARE_UNSIGN);
 	private static final JButton CUSTOM_IPWNDFU_FLAGS = new JButton(C8Const.CUSTOM_IPWNDFU_FLAGS);
-	private static final JButton SETTINGS = new JButton(C8Const.SETTINGS);
 	private static final JButton ABOUT = new JButton(C8Const.ABOUT);
 	private static final JButton OK = new JButton(C8Const.OK);
 	private static final JLabel NEWLINE = new JLabel(C8Const.NEWLINE);
 	private static final JLabel EXPLOITING_LABEL = new JLabel(C8Const.EXPLOITING_LABEL);
 	private static JPanel exploitOutput = new JPanel();
-	private static final JLabel IPWNDFU_FOLDER_LABEL = new JLabel(C8Const.IPWNDFU_FOLDER_LABEL);
-	private static final JTextField IPWNDFU_FOLDER = new JTextField(50);
-	private static final JButton SAVE_RETURN = new JButton(C8Const.SAVE_RETURN);
 	private static final JButton BACK = new JButton(C8Const.BACK);
 	private Display() {}
 	public static void createDisplay(String[] args) {
@@ -53,11 +49,8 @@ public class Display {
 		Display.RESTORE_FIRMWARE_SIGN.addActionListener(CLASS_OBJECT.new RestoreFirmwareSign());
 		Display.RESTORE_FIRMWARE_UNSIGN.addActionListener(CLASS_OBJECT.new RestoreFirmwareUnsign());
 		Display.CUSTOM_IPWNDFU_FLAGS.addActionListener(CLASS_OBJECT.new CustomIpwndfuFlags());
-		Display.SETTINGS.addActionListener(CLASS_OBJECT.new Settings());
 		Display.ABOUT.addActionListener(CLASS_OBJECT.new About());
 		Display.OK.addActionListener(CLASS_OBJECT.new OK());
-		Display.IPWNDFU_FOLDER.addActionListener(CLASS_OBJECT.new IpwndfuFolder());
-		Display.SAVE_RETURN.addActionListener(CLASS_OBJECT.new SaveReturn());
 		Display.BACK.addActionListener(CLASS_OBJECT.new Back());
 		
 		Display.PANEL.setLayout(new BoxLayout(Display.PANEL, BoxLayout.Y_AXIS));
@@ -72,10 +65,7 @@ public class Display {
 		Display.PANEL.add(Display.RESTORE_FIRMWARE_SIGN);
 		Display.PANEL.add(Display.RESTORE_FIRMWARE_UNSIGN);
 		Display.PANEL.add(Display.CUSTOM_IPWNDFU_FLAGS);
-		Display.PANEL.add(Display.SETTINGS);
 		Display.PANEL.add(Display.ABOUT);
-		
-		Display.IPWNDFU_FOLDER.setMaximumSize(Display.IPWNDFU_FOLDER.getPreferredSize());
 		
 		Display.renderDisplay();
 	}
@@ -307,23 +297,6 @@ public class Display {
 			// will be implemented shortly after the first release
 		}
 	}
-	public class Settings implements ActionListener {
-		public void actionPerformed(ActionEvent ev) {
-			Display.IPWNDFU_FOLDER.setText(Checkm8Launcher.ipwndfuFolder);
-			Display.exploitOutput = new JPanel();
-			Display.exploitOutput.setLayout(new BoxLayout(Display.exploitOutput, BoxLayout.Y_AXIS));
-			JPanel inner1 = new JPanel();
-			inner1.setLayout(new BoxLayout(inner1, BoxLayout.X_AXIS));
-			inner1.add(Display.IPWNDFU_FOLDER_LABEL);
-			inner1.add(Display.IPWNDFU_FOLDER);
-			Display.exploitOutput.add(inner1);
-			Display.exploitOutput.add(Display.NEWLINE);
-			Display.exploitOutput.add(Display.SAVE_RETURN);
-			Display.FRAME.getContentPane().remove(Display.PANEL);
-			Display.FRAME.getContentPane().add(BorderLayout.WEST, Display.exploitOutput);
-			Display.refresh();
-		}
-	}
 	public class About implements ActionListener {
 		public void actionPerformed(ActionEvent ev) {
 			Display.exploitOutput = new JPanel();
@@ -342,33 +315,6 @@ public class Display {
 		public void actionPerformed(ActionEvent ev) {
 			Display.FRAME.getContentPane().remove(Display.exploitOutput);
 			Display.renderDisplay();
-		}
-	}
-	public class IpwndfuFolder implements ActionListener {
-		public void actionPerformed(ActionEvent ev) {
-			Checkm8Launcher.ipwndfuFolder = Display.IPWNDFU_FOLDER.getText();
-		}
-	}
-	public class SaveReturn implements ActionListener {
-		public void actionPerformed(ActionEvent ev) {
-			Checkm8Launcher.ipwndfuFolder = Display.IPWNDFU_FOLDER.getText();
-			if (new File(C8Const.SETTINGS_FILE).delete()) {
-				try {
-					FileOutputStream fos = new FileOutputStream(C8Const.SETTINGS_FILE);
-					String write = "ipwndfu-directory=" + Checkm8Launcher.ipwndfuFolder;
-					fos.write(write.getBytes());
-					fos.flush();
-					fos.close();
-				} catch (IOException ex) {
-					ex.printStackTrace();
-					System.exit(1);
-				}
-				Display.FRAME.getContentPane().remove(Display.exploitOutput);
-				Display.renderDisplay();
-			} else {
-				System.out.println("Unexpected error occurred while trying to delete checkm8gui.bin.");
-				System.exit(1);
-			}
 		}
 	}
 	public class Back implements ActionListener {

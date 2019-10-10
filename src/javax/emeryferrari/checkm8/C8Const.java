@@ -2,8 +2,8 @@ package javax.emeryferrari.checkm8;
 public class C8Const {
 	private C8Const() {}
 	public static final String APPLICATION_NAME = "checkm8gui";
-	public static final String[] APPLICATION_AUTHOR = {"u/verystrangebeing", "axi0mX"};
-	public static final String APPLICATION_VERSION = "0.1";
+	public static final String[] APPLICATION_AUTHOR = {"u/verystrangebeing", "axi0mX", "Srikanth Lingala"};
+	public static final String APPLICATION_VERSION = "0.2";
 	
 	public static final String TITLE = "<html><body><font size=\"20\">checkm8gui";
 	public static final String SUBTITLE = "<html><body>by Emery Ferrari, using axi0mX's ipwndfu</font><font size=\"20\"><br/><br/>";
@@ -12,7 +12,7 @@ public class C8Const {
 	public static final String DUMP_SECUREROM = "Dump SecureROM";
 	public static final String DECRYPT_KEYBAG = "Decrypt Keybag";
 	public static final String DEMOTE_DEVICE = "Demote iOS Device";
-	public static final String VERBOSE_BOOT = "Verbose Boot iOS Device";
+	public static final String VERBOSE_BOOT = "Verbose Boot iPhone X";
 	public static final String BOOT_LOGO = "Custom iOS Device Boot Logo";
 	public static final String RESTORE_FIRMWARE_SIGN = "Restore Signed Firmware to iOS Device";
 	public static final String RESTORE_FIRMWARE_UNSIGN = "Restore Unsigned Firmware to iOS Device";
@@ -55,7 +55,8 @@ public class C8Const {
 	
 	public static final String[] OS = {"aix", "mac", "nix", "nux"};
 	
-	public static final String VALID = "Valid operating system detected.\\nLaunching...\\n";
-	public static final String IGNORE = "Invalid operating system detected.\\nIgnoring and launching...\\n";
-	public static final String INVALID = "Invalid operating system detected.\\nipwndfu is a Unix executable and must run on a Unix-based operating system such as macOS or a variant of Linux.\\nIf your operating system is based on Unix and this error message persists, run this program again with the --ignore-os argument.\\nQuitting...\\n";
+	public static final String VALID = "Valid operating system detected.\nLaunching...\n";
+	public static final String IGNORE = "Invalid operating system detected.\nIgnoring and launching...\n";
+	public static final String INVALID = "Invalid operating system detected.\nipwndfu is a Unix executable and must run on a Unix-based operating system such as macOS or a variant of Linux.\nIf your operating system is based on Unix and this error message persists, run this program again with the --ignore-os argument.\nQuitting...\n";
+	public static final String ZIP_ERROR = "Your installation of checkm8gui is likely broken.\nPlease clone checkm8gui or download the latest release again.";
 }

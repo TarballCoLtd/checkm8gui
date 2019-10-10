@@ -1,40 +1,21 @@
 package javax.emeryferrari.checkm8;
+import net.lingala.zip4j.exception.*;
+import net.lingala.zip4j.*;
 import java.io.*;
 public class Checkm8Launcher {
 	private static final String osRaw = System.getProperty(C8Const.OS_NAME);
 	private static final String os = System.getProperty(C8Const.OS_NAME).toLowerCase();
-	public static String ipwndfuFolder = "";
+	public static String ipwndfuFolder = "ipwndfu/";
 	private Checkm8Launcher() {}
 	public static void main(String[] args) {
-		boolean set = true;
-		for (int x = 0; x < args.length; x++) {
-			if (args[x].equals(C8Const.IPWNDFU_FOLDER_FLAG)) {
-				if (x+1 < args.length) {
-					Checkm8Launcher.ipwndfuFolder = args[x+1];
-					set = false;
-				}
-			}
+		try {
+			new Checkm8Launcher().extract();
+		} catch(IOException ex) {
+			ex.printStackTrace();
+			System.out.println(C8Const.ZIP_ERROR);
+			System.exit(1);
 		}
-		if (set) {
-			try {
-				if (!new File(C8Const.SETTINGS_FILE).exists()) {
-					FileOutputStream fos = new FileOutputStream(C8Const.SETTINGS_FILE);
-					fos.write(C8Const.DEFAULT_1.getBytes());
-					fos.flush();
-					fos.close();
-				}
-				FileInputStream fis = new FileInputStream(C8Const.SETTINGS_FILE);
-				BufferedReader reader = new BufferedReader(new InputStreamReader(fis));
-				Checkm8Launcher.ipwndfuFolder = reader.readLine().split("=")[1];
-				reader.close();
-			} catch (IOException ex) {
-				ex.printStackTrace();
-				System.exit(1);
-			} catch (ArrayIndexOutOfBoundsException ex) {
-				ex.printStackTrace();
-				System.exit(1);
-			}
-		}
+		
 		C8Const.EXPLOIT_DEVICE_COMMAND = "./" + Checkm8Launcher.ipwndfuFolder + "ipwndfu -p";
 		C8Const.DUMP_SECUREROM_COMMAND = "./" + Checkm8Launcher.ipwndfuFolder + "ipwndfu --dump-rom";
 		C8Const.DEMOTE_DEVICE_COMMAND = "./" + Checkm8Launcher.ipwndfuFolder + "ipwndfu --demote";
@@ -81,5 +62,28 @@ public class Checkm8Launcher {
 	}
 	private static void launch(String[] args) {
 		Display.createDisplay(args);
+	}
+	private void extract() throws IOException {
+		File output = new File("ipwndfu.zip");
+		InputStream is = this.getClass().getClassLoader().getResourceAsStream("ipwndfu.zip");
+		FileOutputStream fos = new FileOutputStream(output);
+		byte[] buffer = new byte[4096];
+		int read;
+		while ((read = is.read(buffer)) > 0) {
+			fos.write(buffer, 0, read);
+			fos.flush();
+		}
+		fos.close();
+		try {
+			String source = System.getProperty("user.dir") + "/ipwndfu.zip";
+			String destination = System.getProperty("user.dir") + "/ipwndfu";
+			ZipFile file = new ZipFile(source);
+			file.extractAll(destination);
+		} catch (ZipException ex) {
+			ex.printStackTrace();
+			System.out.println(C8Const.ZIP_ERROR);
+		}
+		File ipwndfu = new File(System.getProperty("user.dir") + "/ipwndfu.zip");
+		ipwndfu.delete();
 	}
 }
