@@ -5,7 +5,7 @@ checkm8gui is an application for macOS and Linux which adapts the [ipwndfu](http
 ## Credit
 
 This program was written by [me](https://github.com/emeryferrari/), however this program would not be possible without the work [axi0mX](https://twitter.com/axi0mx/) has put into [ipwndfu](https://github.com/axi0mx/ipwndfu/) and the work [Srikanth Lingala](https://github.com/srikanth-lingala/) has put into [zip4j](https://github.com/srikanth-lingala/zip4j/).<br/>
-zip4j is licensed under the Apache License 2.0.
+[zip4j](https://github.com/srikanth-lingala/zip4j/) is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt).<br/>
 zip4j Copyright 2010 Srikanth Reddy Lingala
 
 ## Testing
