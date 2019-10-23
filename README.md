@@ -10,7 +10,7 @@ zip4j Copyright 2010 Srikanth Reddy Lingala
 
 ## Testing
 
-This program's GUI has been tested on an Ubuntu virtual machine and on a Windows machine, however, it has not been tested on a physical iOS device because I only own an S8003 iPhone 6s which is not currently supported by ipwndfu.\n\n
+This program's GUI has been tested on an Ubuntu virtual machine and on a Windows machine, however, it has not been tested on a physical iOS device because I only own an S8003 iPhone 6s which is not currently supported by ipwndfu.<br/><br/>
 UPDATE: On October 22nd, checkm8gui v0.2 was tested on a 2013 Apple TV 3rd generation and was successfully put into pwned DFU mode. No other functions of checkm8gui were tested and no other devices have been tested.
 
 ## Features
