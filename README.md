@@ -23,8 +23,7 @@ This is not a tool for the inexperienced. This tool could seriously damage your 
 
 ## Compilation/Execution
 
-This tool can either be run from the .jar executable of the latest release in the Releases tab, or can be compiled using javac.<br/>
-If this program is compiled from the source code, the ipwndfu.zip file found in the src folder must be copied to the root of the compiled program's folder, otherwise checkm8gui will fail. If you run the program from the .jar in the Releases tab, this is not necessary and it can be run immediately.
+This tool can either be run from the .jar executable of the latest release in the Releases tab, or can be compiled using javac.
 
 ## Prerequisites
 
@@ -37,15 +36,11 @@ A Unix-based operating system
 --ignore-os - Launches the application regardless of what operating system it's being run on.<br/>
 --ipwndfu-folder folder - A command to manually specify your ipwndfu folder location. This does not overwrite the location recorded in checkm8gui.bin. This folder specification will only persist in the current session.<br/>
 
-## Troubleshooting
-
-If the program crashes without any prior notification or explanation of what happened, run the program from the command-line. Useful information is printed to the console in the event of a crash.
-
 ## Known issues
 
-There are many performance and consistency issues in the source code. None of these will affect your experience with the program in practice, however these are planned to be fixed in the next update nonetheless. Saving changes to the program settings also crashes the program. This will be fixed soon. All features listed on disabled buttons are planned to be implemented in the near future.
+There are many performance and consistency issues in the source code. None of these will affect your experience with the program in practice, however these are planned to be fixed in a future pre-release update nonetheless.
 
 ## Contacting me
 
-I will respond to any PM I receive on Reddit.
+I will respond to any PM I receive on Reddit.<br/>
 [u/verystrangebeing](https://reddit.com/user/verystrangebeing/)
