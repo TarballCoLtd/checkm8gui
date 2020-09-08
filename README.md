@@ -1,10 +1,10 @@
 # checkm8gui
 
-checkm8gui is an application for macOS and Linux which adapts the [ipwndfu](https://github.com/axi0mx/ipwndfu/) command-line tool by [axi0mX](https://twitter.com/axi0mx/) to a graphical application.
+checkm8gui is an application for macOS and Linux which adapts the [ipwndfu](https://github.com/axi0mx/ipwndfu/) command-line tool by [@axi0mX](https://github.com/axi0mx/) to a GUI.
 
 ## Credit
 
-This program was written by [me](https://github.com/emeryferrari/), however this program would not be possible without the work [axi0mX](https://twitter.com/axi0mx/) has put into [ipwndfu](https://github.com/axi0mx/ipwndfu/) and the work [Srikanth Lingala](https://github.com/srikanth-lingala/) has put into [zip4j](https://github.com/srikanth-lingala/zip4j/).<br/>
+This program was written by [me, Alyx Ferrari](https://github.com/alyxferrari/), however this program would not be possible without the work [@axi0mX](https://github.com/axi0mx/) has put into [ipwndfu](https://github.com/axi0mx/ipwndfu/) and the work [@Srikanth-Lingala](https://github.com/srikanth-lingala/) has put into [zip4j](https://github.com/srikanth-lingala/zip4j/).<br/>
 [zip4j](https://github.com/srikanth-lingala/zip4j/) is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt).<br/>
 zip4j Copyright 2010 Srikanth Reddy Lingala
 
@@ -27,8 +27,8 @@ This tool can either be run from the .jar executable of the latest release in th
 
 ## Prerequisites
 
-Java Runtime Environment or Java Development Kit<br/>
-A Unix-based operating system
+Java Runtime Environment or Java Development Kit (Java 8 through 14 are known to work)<br/>
+A Unix-based operating system (tested on both Ubuntu 19.04 and macOS 10.15)
 
 ## Command-line arguments
 
