@@ -4,18 +4,18 @@ checkm8gui is an application for macOS and Linux which adapts the [ipwndfu](http
 
 ## Credit
 
-This program was written by [me, Alyx Ferrari](https://github.com/alyxferrari/), however this program would not be possible without the work [@axi0mX](https://github.com/axi0mx/) has put into [ipwndfu](https://github.com/axi0mx/ipwndfu/) and the work [@Srikanth-Lingala](https://github.com/srikanth-lingala/) has put into [zip4j](https://github.com/srikanth-lingala/zip4j/).<br/>
+This program was written by me, however this program would not be possible without the work [axi0mX](https://github.com/axi0mx/) has put into [ipwndfu](https://github.com/axi0mx/ipwndfu/) and the work [@Srikanth-Lingala](https://github.com/srikanth-lingala/) has put into [zip4j](https://github.com/srikanth-lingala/zip4j/).<br/>
 [zip4j](https://github.com/srikanth-lingala/zip4j/) is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt).<br/>
 zip4j Copyright 2010 Srikanth Reddy Lingala
 
 ## Testing
 
-This program's GUI has been tested on an Ubuntu virtual machine and on a Windows machine, however, it has not been tested on a physical iOS device because I only own an S8003 iPhone 6s which is not currently supported by ipwndfu.<br/><br/>
-UPDATE: On October 22nd, checkm8gui v0.2 was tested on a 2013 Apple TV 3rd generation and was successfully put into pwned DFU mode. No other functions of checkm8gui were tested and no other devices have been tested.
+This program's GUI has been tested on an Ubuntu 19.04.3 virtual machine and on a Windows host machine, however, it has not been tested on a physical iOS device because I only own an S8003 iPhone 6s which is not currently supported by ipwndfu.<br/><br/>
+UPDATE: On October 22nd, 2019, checkm8gui v0.2 was tested on a 2013 Apple TV 3rd generation and was successfully put into pwned DFU mode. No other functions of checkm8gui were tested and no other devices have been tested.
 
 ## Features
 
-This program can enter your device into pwned DFU mode on a checkm8-compatible device. Once the device is in pwned DFU mode, this program can dump the SecureROM of the device, demote the device, or verbose boot the device. Features which are planned to be implemented in the near future are: decrypting keybags, changing your boot logo, restoring to signed and unsigned firmwares, and running custom ipwndfu commands.
+This program can put your device into pwned DFU mode on a checkm8-compatible device. Once the device is in pwned DFU mode, this program can dump the SecureROM of the device, demote the device (do your research on this before trying), or verbose boot an A11 iPhone X. Features which are planned to be implemented in the near future are: decrypting keybags, changing your boot logo, restoring to signed and unsigned firmwares, and running custom ipwndfu commands.
 
 ## Disclaimer
 
@@ -28,13 +28,13 @@ This tool can either be run from the .jar executable of the latest release in th
 ## Prerequisites
 
 Java Runtime Environment or Java Development Kit (Java 8 through 14 are known to work)<br/>
-A Unix-based operating system (tested on both Ubuntu 19.04 and macOS 10.15)
+A Unix-based operating system (tested on both Ubuntu 19.04.3 and macOS 10.15.6)
 
 ## Command-line arguments
 
 -v/-verbose - Prints the command issued to the terminal along with the output of the command when an option is picked. This is not to be confused with verbose booting your iOS device.<br/>
 --ignore-os - Launches the application regardless of what operating system it's being run on.<br/>
---ipwndfu-folder folder - A command to manually specify your ipwndfu folder location. This does not overwrite the location recorded in checkm8gui.bin. This folder specification will only persist in the current session.<br/>
+--ipwndfu-folder folder - A command to manually specify your ipwndfu folder location. This does not overwrite the location recorded in checkm8gui.bin. This folder specification will only persist in the current session.
 
 ## Known issues
 
