@@ -8,11 +8,6 @@ This program was written by me, however this program would not be possible witho
 [zip4j](https://github.com/srikanth-lingala/zip4j/) is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt).<br/>
 zip4j Copyright 2010 Srikanth Reddy Lingala
 
-## Testing
-
-This program's GUI has been tested on an Ubuntu 19.04.3 virtual machine and on a Windows host machine, however, it has not been tested on a physical iOS device because I only own an S8003 iPhone 6s which is not currently supported by ipwndfu.<br/><br/>
-UPDATE: On October 22nd, 2019, checkm8gui v0.2 was tested on a 2013 Apple TV 3rd generation and was successfully put into pwned DFU mode. No other functions of checkm8gui were tested and no other devices have been tested.
-
 ## Features
 
 This program can put your device into pwned DFU mode on a checkm8-compatible device. Once the device is in pwned DFU mode, this program can dump the SecureROM of the device, demote the device (do your research on this before trying), or verbose boot an A11 iPhone X. Features which are planned to be implemented in the near future are: decrypting keybags, changing your boot logo, restoring to signed and unsigned firmwares, and running custom ipwndfu commands.
