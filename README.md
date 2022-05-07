@@ -1,6 +1,6 @@
 # checkm8gui
 
-checkm8gui is an application for macOS and Linux which adapts the [ipwndfu](https://github.com/axi0mx/ipwndfu/) bootrom exploit suite by [@axi0mX](https://github.com/axi0mx/) to a GUI.
+checkm8gui is an application for macOS and Linux which is a GUI for the [ipwndfu](https://github.com/axi0mx/ipwndfu/) bootrom exploit suite by [@axi0mX](https://github.com/axi0mx/).
 
 ## Credit
 
