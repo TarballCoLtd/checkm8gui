@@ -1,12 +1,6 @@
 # checkm8gui
 
-checkm8gui is an application for macOS and Linux which is a GUI for the [ipwndfu](https://github.com/axi0mx/ipwndfu/) bootrom exploit suite by [@axi0mX](https://github.com/axi0mx/).
-
-## Credit
-
-This program was written by me, however this program would not be possible without the work [axi0mX](https://github.com/axi0mx/) has put into [ipwndfu](https://github.com/axi0mx/ipwndfu/) and the work [@Srikanth-Lingala](https://github.com/srikanth-lingala/) has put into [zip4j](https://github.com/srikanth-lingala/zip4j/).<br/>
-[zip4j](https://github.com/srikanth-lingala/zip4j/) is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt).<br/>
-zip4j Copyright 2010 Srikanth Reddy Lingala
+checkm8gui is an application for macOS and Linux which is a GUI for the [ipwndfu](https://github.com/axi0mX/ipwndfu/) bootrom exploit suite by [@axi0mX](https://github.com/axi0mx/).
 
 ## Features
 
