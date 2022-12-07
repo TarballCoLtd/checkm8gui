@@ -28,8 +28,3 @@ A Unix-based operating system (tested on both Ubuntu 19.04.3 and macOS 10.15.6)
 ## Known issues
 
 There are many performance and consistency issues in the source code. None of these will affect your experience with the program in practice, however these are planned to be fixed in a future pre-release update nonetheless.
-
-## Contacting me
-
-I will respond to any PM I receive on Reddit.<br/>
-[u/verystrangebeing](https://reddit.com/user/verystrangebeing/)
